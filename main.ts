@@ -19,6 +19,30 @@ input.onButtonPressed(Button.A, function () {
             `)
     }
 })
+input.onButtonPressed(Button.AB, function () {
+    randomnumber = randint(1, 3)
+    if (randomnumber == 1) {
+        basic.showIcon(IconNames.Scissors)
+    } else if (randomnumber == 2) {
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
+    } else {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    }
+    basic.pause(500)
+    basic.clearScreen()
+})
 input.onButtonPressed(Button.B, function () {
     randomnumber = randint(1, 6)
     if (randomnumber == 1) {
@@ -72,7 +96,4 @@ input.onButtonPressed(Button.B, function () {
     }
     basic.pause(500)
     basic.clearScreen()
-})
-basic.forever(function () {
-	
 })
